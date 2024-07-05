@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 1rem 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            position: relative;
+            background-color: #282c34;
+            color: #61dafb;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            /* cursor: pointer; */
+            
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #61dafb;
+            border: none;
+            color: #282c34;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Learn Python</h1>
+        <nav>
+            <ul>
+                <li><a href="#history">Python History</a></li>
+                <li><a href="#interactive-vs-script">Interactive vs Script Mode</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#data-types">Data Types</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#idle">IDLE</a></li>
+                <li><a href="#casting">Casting</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#string-indexing">String Indexing</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tuples">Tuples</a></li>
+                <li><a href="#dictionaries">Dictionaries</a></li>
+                <li><a href="#sets">Sets</a></li>
+                <li><a href="#boolean">Boolean Values</a></li>
+                <li><a href="#conditions">Conditions</a></li>
+                <li><a href="#loops">Loops</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#exceptions">Exception Handling</a></li>
+                <li><a href="#file-handling">File Handling</a></li>
+                <li><a href="#classes">Classes and Objects</a></li>
+                <li><a href="#oops">OOP Concepts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="history">
+            <h2>Python History</h2>
+            <p>Python was created by Guido van Rossum and first released in 1991. It has since evolved through many
+                versions, each bringing new features and improvements. Python's simplicity and readability have made it
+                one of the most popular programming languages in the world.</p>
+                
+        </section>
+        <section id="interactive-vs-script">
+            <h2>Python Interactive Mode and Script Mode</h2>
+            <p>Interactive mode allows you to type Python commands and see the results immediately. It's useful for
+                quick tests and debugging.</p>
+
+            <pre><code>&gt;&gt;&gt; print("Hello, World!")
+Hello, World!
+<button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p>In script mode, you write your code in a file with a `.py` extension and run it using the Python
+                interpreter.</p>
+            <pre><code># script.py
+print("Hello, World!")
+
+# Run the script
+$ python script.py
+<button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="variables">
+            <h2>Python Variables</h2>
+            <p>Variables are used to store data that can be used and manipulated throughout your program.</p>
+            <p><strong>Rules for Naming Variables:</strong></p>
+            <ul>
+                <li>Must start with a letter or underscore.</li>
+                <li>Can contain letters, numbers, and underscores.</li>
+                <li>Case-sensitive.</li>
+            </ul>
+            <pre><code>x = 5
+name = "Alice"
+is_student = True
+<button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="data-types">
+            <h2>Python Data Types</h2>
+            <p>Python has several built-in data types. Here are some of the most common:</p>
+            <p><strong>Integers and Floats</strong></p>
+            <pre><code>x = 10  # int
+y = 3.14  # float
+<button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Strings</strong></p>
+            <pre><code>name = "Alice"  # str <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Booleans</strong></p>
+            <pre><code>is_student = True  # bool <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Lists</strong></p>
+            <pre><code>fruits = ["apple", "banana", "cherry"]  # list <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Tuples</strong></p>
+            <pre><code>coordinates = (10.0, 20.0)  # tuple <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Dictionaries</strong></p>
+            <pre><code>student = {"name": "Alice", "age": 20}  # dict <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Sets</strong></p>
+            <pre><code>s = {"apple", "banana", "cherry"}  # set <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="operators">
+            <h2>Operators</h2>
+            <p>Python supports several types of operators:</p>
+            <p><strong>Arithmetic Operators</strong></p>
+            <pre><code >x = 10
+y = 5
+print(x + y)  # 15
+print(x - y)  # 5
+print(x * y)  # 50
+print(x / y)  # 2.0
+print(x % y)  # 0
+<button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Comparison Operators</strong></p>
+            <pre><code>print(x == y)  # False
+print(x != y)  # True
+print(x > y)  # True
+print(x < y)  # False <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Logical Operators</strong></p>
+            <pre><code>a = True
+b = False
+print(a and b)  # False
+print(a or b)  # True
+print(not a)  # False <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="idle">
+            <h2>IDLE File Saving and Execution</h2>
+            <p>Python's Integrated Development and Learning Environment (IDLE) is a handy tool to write, save, and run
+                Python scripts.</p>
+            <ol>
+                <li>Open IDLE from your applications.</li>
+                <li>Write your Python code in the editor window.</li>
+                <li>Save the file with a .py extension (e.g., script.py).</li>
+                <li>Run the script by pressing F5 or selecting Run > Run Module from the menu.</li>
+            </ol>
+        </section>
+        <section id="casting">
+            <h2>Python Casting (Type Conversion)</h2>
+            <p>Type casting in Python is used to convert one data type to another.</p>
+            <pre><code>x = 5  # int
+y = 3.14  # float
+z = "7"  # str
+
+# Convert int to float
+a = float(x)
+
+# Convert float to int
+b = int(y)
+
+# Convert str to int
+c = int(z) <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="strings">
+            <h2>Python Strings</h2>
+            <p>A string is a sequence of characters enclosed in quotes. Python allows for various operations and
+                manipulations on strings.</p>
+            <pre><code>name = "Alice"
+message = 'Hello, World!'
+
+# Concatenation
+greeting = "Hello, " + name
+
+# Multi-line strings
+multiline_string = """
+This is a multiline
+string in Python.
+""" <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="string-indexing">
+            <h2>String Indexing and Slicing</h2>
+            <p>Strings can be indexed (subscripted), with the first character having index 0.</p>
+            <pre><code>message = "Hello, World!"
+
+print(message[0])    # 'H'
+print(message[7])    # 'W'
+
+# Slicing
+print(message[7:12])  # 'World'
+print(message[:5])    # 'Hello'
+print(message[7:])    # 'World!' <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="lists">
+            <h2>Python Lists</h2>
+            <p>Lists are used to store multiple items in a single variable.</p>
+            <p><strong>Methods that Modify the List In-Place</strong></p>
+            <pre><code>fruits = ["apple", "banana", "cherry"]
+
+# append(x): Adds element x to the end of the list.
+fruits.append("date")
+print(fruits)  # ['apple', 'banana', 'cherry', 'date']
+
+# extend(iterable): Extends the list by appending all elements from the iterable.
+fruits.extend(["grape", "melon"])
+print(fruits)  # ['apple', 'banana', 'cherry', 'date', 'grape', 'melon']
+
+# insert(i, x): Inserts element x at index i.
+fruits.insert(1, "orange")
+print(fruits)  # ['apple', 'orange', 'banana', 'cherry', 'date', 'grape', 'melon']
+
+# remove(x): Removes the first item from the list whose value is x.
+fruits.remove("banana")
+print(fruits)  # ['apple', 'orange', 'cherry', 'date', 'grape', 'melon']
+
+# pop([i]): Removes and returns the item at index i. If i is not specified, removes and returns the last item in the list.
+popped = fruits.pop(2)
+print(fruits)  # ['apple', 'orange', 'date', 'grape', 'melon']
+print(popped)  # cherry
+
+# clear(): Removes all items from the list.
+fruits.clear()
+print(fruits)  # [] <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Methods that Return a Modified Copy of the List</strong></p>
+            <pre><code>fruits = ["apple", "banana", "cherry", "banana"]
+
+# copy(): Returns a shallow copy of the list.
+fruits_copy = fruits.copy()
+print(fruits_copy)  # ['apple', 'banana', 'cherry', 'banana']
+
+# count(x): Returns the number of times x appears in the list.
+count_banana = fruits.count("banana")
+print(count_banana)  # 2
+
+# index(x[, start[, end]]): Returns the index of the first occurrence of x in the list (optional start and end indices).
+index_banana = fruits.index("banana")
+print(index_banana)  # 1 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Additional Utility Methods</strong></p>
+            <pre><code># len(): Returns the number of items in the list (not a method of list objects, but commonly used with lists).
+print(len(fruits))  # 4 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+
+        <section id="tuples">
+            <h2>Python Tuples</h2>
+            <p>Tuples are similar to lists but are immutable, meaning their values cannot be changed.</p>
+            <p><strong>Methods for Tuples</strong></p>
+            <pre><code>coordinates = (10.0, 20.0)
+
+# count(x): Returns the number of times x appears in the tuple.
+count_10 = coordinates.count(10.0)
+print(count_10)  # 1
+
+# index(x): Returns the index of the first occurrence of x in the tuple.
+index_20 = coordinates.index(20.0)
+print(index_20)  # 1 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+
+        <section id="dictionaries">
+            <h2>Python Dictionaries</h2>
+            <p>Dictionaries store data in key-value pairs.</p>
+            <p><strong>Methods for Dictionaries</strong></p>
+            <pre><code>student = {"name": "Alice", "age": 20}
+
+# clear(): Removes all items from the dictionary.
+student.clear()
+print(student)  # {}
+
+# copy(): Returns a shallow copy of the dictionary.
+student = {"name": "Alice", "age": 20}
+student_copy = student.copy()
+print(student_copy)  # {'name': 'Alice', 'age': 20}
+
+# get(key[, default]): Returns the value for key if key is in the dictionary, else default.
+name = student.get("name", "Unknown")
+print(name)  # Alice
+
+# items(): Returns a view object that displays a list of a dictionary's key-value tuple pairs.
+items = student.items()
+print(items)  # dict_items([('name', 'Alice'), ('age', 20)])
+
+# keys(): Returns a view object that displays a list of all the keys in the dictionary.
+keys = student.keys()
+print(keys)  # dict_keys(['name', 'age'])
+
+# values(): Returns a view object that displays a list of all the values in the dictionary.
+values = student.values()
+print(values)  # dict_values(['Alice', 20])
+
+# pop(key[, default]): Removes the item with the specified key and returns its value or default if key is not found.
+age = student.pop("age")
+print(age)  # 20
+
+# popitem(): Removes and returns an arbitrary key-value pair from the dictionary.
+item = student.popitem()
+print(item)  # ('name', 'Alice')
+
+# update(iterable): Updates the dictionary with the items from the iterable.
+student.update({"grade": "A"})
+print(student)  # {'grade': 'A'} <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="sets">
+            <h2>Python Sets</h2>
+            <p>Sets are unordered collections of unique elements.</p>
+            <p><strong>Methods for Sets</strong></p>
+            <pre><code>s = {"apple", "banana", "cherry"}
+
+# add(x): Adds element x to the set.
+s.add("date")
+print(s)  # {'apple', 'banana', 'cherry', 'date'}
+
+# remove(x): Removes the specified element from the set.
+s.remove("banana")
+print(s)  # {'apple', 'cherry', 'date'} <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="sets">
+            <h2>Python Sets</h2>
+            <p>A set is a collection that is unordered and unindexed. It does not allow duplicate members.</p>
+            <pre><code>s = {"apple", "banana", "cherry"}
+
+# Accessing items
+for item in s:
+    print(item)
+
+# Adding items
+s.add("orange")
+print(s)    # {'apple', 'cherry', 'orange', 'banana'} <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="boolean">
+            <h2>Python Boolean Values</h2>
+            <p>Boolean values are the two constant objects False and True.</p>
+            <pre><code>a = True
+b = False
+
+print(a)    # True
+print(b)    # False <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="conditions">
+            <h2>Python Conditions and If Statements</h2>
+            <p>Python supports the usual logical conditions from mathematics:</p>
+            <pre><code>a = 33
+b = 200
+
+if b > a:
+    print("b is greater than a") <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Elif</strong></p>
+            <pre><code>a = 33
+b = 33
+
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal") <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Else</strong></p>
+            <pre><code>a = 200
+b = 33
+
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+else:
+    print("a is greater than b") <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="loops">
+            <h2>Python Loops</h2>
+            <p>Python has two primitive loop commands:</p>
+            <p><strong>While Loop</strong></p>
+            <pre><code>i = 1
+while i &lt;= 5:
+    print(i)
+    i += 1 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>For Loop</strong></p>
+            <pre><code>fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit) <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="functions">
+            <h2>Python Functions</h2>
+            <p>A function is a block of code that only runs when it is called. You can pass data, known as parameters,
+                into a function.</p>
+            <pre><code>def greet(name):
+    print("Hello, " + name)
+
+greet("Alice") <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="modules">
+            <h2>Python Modules</h2>
+            <p>Modules are files containing Python code that can be imported and used in other Python programs.</p>
+            <pre><code>import math
+
+print(math.sqrt(16))    # 4.0 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="exceptions">
+            <h2>Python Exception Handling</h2>
+            <p>Python uses try and except blocks to handle errors and exceptions.</p>
+            <pre><code>try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero!") <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="file-handling">
+            <h2>Python File Handling</h2>
+            <p>Python allows you to read from and write to files using built-in functions.</p>
+            <p><strong>Reading from a File</strong></p>
+            <pre><code>file = open("data.txt", "r")
+print(file.read())
+file.close() <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Writing to a File</strong></p>
+            <pre><code>file = open("data.txt", "w")
+file.write("Hello, World!")
+file.close() <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="classes">
+            <h2>Python Classes and Objects</h2>
+            <p>A class is a blueprint for creating objects. An object is an instance of a class.</p>
+            <pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Hello, my name is " + self.name)
+
+# Create an object
+p1 = Person("Alice", 20)
+p1.greet() <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="oops">
+            <h2>Python OOP Concepts</h2>
+            <p>Python supports object-oriented programming (OOP) with features like inheritance, encapsulation, and
+                polymorphism.</p>
+            <p><strong>Inheritance</strong></p>
+            <pre><code>class Student(Person):
+    def __init__(self, name, age, major):
+        super().__init__(name, age)
+        self.major = major
+
+    def study(self):
+        print(self.name + " is studying " + self.major)
+
+# Create an object
+s1 = Student("Bob", 21, "Computer Science")
+s1.study() <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Encapsulation</strong></p>
+            <pre><code>class Car:
+    def __init__(self, brand):
+        self.__brand = brand
+
+    def get_brand(self):
+        return self.__brand
+
+    def set_brand(self, brand):
+        self.__brand = brand
+
+# Create an object
+car = Car("Toyota")
+print(car.get_brand())    # 'Toyota'
+car.set_brand("Honda")
+print(car.get_brand())    # 'Honda' <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Polymorphism</strong></p>
+            <pre><code>class Animal:
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+class Cat(Animal):
+    def sound(self):
+        print("Meow")
+
+# Create objects
+dog = Dog()
+cat = Cat()
+
+dog.sound()    # 'Bark'
+cat.sound()    # 'Meow' <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="more">
+            <h2>Python More Concepts</h2>
+            <p>Python provides several additional features and functionalities.</p>
+            <p><strong>Lambda Functions</strong></p>
+            <pre><code>f = lambda x: x**2
+print(f(5))    # 25 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>List Comprehension</strong></p>
+            <pre><code>numbers = [1, 2, 3, 4, 5]
+squares = [x**2 for x in numbers]
+print(squares)    # [1, 4, 9, 16, 25] <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Map, Filter, and Reduce</strong></p>
+            <pre><code>numbers = [1, 2, 3, 4, 5]
+
+# Map
+doubled = list(map(lambda x: x*2, numbers))
+print(doubled)    # [2, 4, 6, 8, 10]
+
+# Filter
+evens = list(filter(lambda x: x%2 == 0, numbers))
+print(evens)    # [2, 4]
+
+# Reduce
+from functools import reduce
+sum_all = reduce(lambda x, y: x+y, numbers)
+print(sum_all)    # 15 <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+            <p><strong>Decorators</strong></p>
+            <pre><code>def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello() <button class="copy-btn" onclick="copyCode(this)">Copy</button></code></pre>
+        </section>
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Python is a versatile and powerful programming language suitable for a wide range of applications, from
+                web development to scientific computing. Its simple syntax and rich ecosystem make it a popular choice
+                among developers.</p>
+        </section>
+
+        <script>
+            function copyCode(button) {
+                var codeElement = button.closest('pre').querySelector('code');
+                
+                if (codeElement) {
+                    var codeContent = codeElement.textContent.trim(); // Get the text content of <code>
+                    var buttonText = button.textContent.trim(); // Get the text content of the button
+                    
+                    // Remove the button text from the code content
+                    codeContent = codeContent.replace(buttonText, '');
+                    
+                    navigator.clipboard.writeText(codeContent).then(function() {
+                        console.log('Code copied to clipboard');
+                        
+                        // Optionally, provide visual feedback that copying was successful
+                        button.textContent = 'Copied!'; // Update button text
+                        setTimeout(function() {
+                            button.textContent = 'Copy'; // Reset button text after 1 second
+                        }, 1000);
+                    }).catch(function(err) {
+                        console.error('Failed to copy text: ', err);
+                    });
+                } else {
+                    console.error('Code block or code element not found');
+                }
+            }
+        </script>
+        
+</body>
+
+</html>
